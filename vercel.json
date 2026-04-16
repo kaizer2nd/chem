@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "cd chemlab-react && npm install",
+  "buildCommand": "cd chemlab-react && npm run build",
+  "outputDirectory": "chemlab-react/dist"
+}
