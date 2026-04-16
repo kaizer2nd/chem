@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Prototyping - Liquid Detergent Preparation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-background">
+            <div class="particle" style="--x: 20%; --y: 30%; --delay: 0s; --duration: 8s;"></div>
+            <div class="particle" style="--x: 80%; --y: 20%; --delay: 1s; --duration: 10s;"></div>
+            <div class="particle" style="--x: 50%; --y: 70%; --delay: 2s; --duration: 9s;"></div>
+            <div class="particle" style="--x: 10%; --y: 80%; --delay: 3s; --duration: 11s;"></div>
+            <div class="particle" style="--x: 90%; --y: 60%; --delay: 1.5s; --duration: 12s;"></div>
+            <div class="particle" style="--x: 40%; --y: 40%; --delay: 2.5s; --duration: 10s;"></div>
+        </div>
+        
+        <div class="loading-container">
+            <div class="molecule-container">
+                <div class="molecule">
+                    <div class="atom atom-center"></div>
+                    <div class="atom atom-orbit atom-1"></div>
+                    <div class="atom atom-orbit atom-2"></div>
+                    <div class="atom atom-orbit atom-3"></div>
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                    <div class="orbit orbit-3"></div>
+                </div>
+            </div>
+            
+            <h1 class="loading-title">ChemLab</h1>
+            <p class="loading-text" id="loadingText">Initializing Chemical Process...</p>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p class="progress-percent" id="progressPercent">0%</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🧪 ChemLab</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#materials" class="nav-link">Materials</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#apparatus" class="nav-link">Apparatus</a></li>
+                <li><a href="#results" class="nav-link">Results</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="stars"></div>
+        <div class="home-content">
+            <h1>Chemical Prototyping and Preparation of Liquid Detergent</h1>
+            <p class="subtitle">A comprehensive guide to industrial detergent synthesis and preparation</p>
+            <button class="cta-button" onclick="document.getElementById('introduction').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+        </div>
+        <div class="home-overlay"></div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="introduction">
+        <div class="container">
+            <h2>Introduction</h2>
+            <div class="intro-content">
+                <div class="intro-card">
+                    <h3>Liquid Detergent Overview</h3>
+                    <p>
+                        Liquid detergents are cleaning agents composed of surfactants and other chemical compounds. 
+                        They are widely used in household and industrial cleaning applications due to their effectiveness 
+                        in removing dirt, grease, and stains from various surfaces. The formulation process involves 
+                        carefully mixing chemical ingredients to achieve optimal cleaning properties and stability.
+                    </p>
+                </div>
+                <div class="intro-card">
+                    <h3>Chemical Engineering in Detergent Detection</h3>
+                    <p>
+                        Chemical engineering plays a crucial role in the detection and formulation of detergent products. 
+                        Engineers analyze chemical compositions, test stability, and ensure product quality through various 
+                        analytical methods. The preparation process involves precise measurements, controlled mixing, and 
+                        thermal processing to create effective cleaning solutions that meet industrial standards and 
+                        consumer requirements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section id="materials" class="materials">
+        <div class="container">
+            <h2>Materials Used in Liquid Detergent Preparation</h2>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-icon">🫒</div>
+                    <h3>Castor Oil</h3>
+                    <p>Natural oil used as a base and emulsifier in detergent formulation. Provides conditioning properties and aids in foam stabilization.</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">💧</div>
+                    <h3>Distilled H₂O (Water)</h3>
+                    <p>Purified water serves as the primary solvent, diluting active ingredients to achieve desired concentration and viscosity.</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">⚪</div>
+                    <h3>Sodium Sulphate (Na₂SO₄)</h3>
+                    <p>Acts as a filler and bulking agent, improving product characteristics and reducing product cost while maintaining effectiveness.</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">🧂</div>
+                    <h3>NaCl (Sodium Chloride)</h3>
+                    <p>Table salt used to adjust viscosity and improve the cleaning efficiency of the detergent formulation.</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">🔬</div>
+                    <h3>Na₂CO₃ (Sodium Carbonate)</h3>
+                    <p>Alkaline builder that enhances cleaning power, removes hardness from water, and boosts detergency of the formulation.</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">🧴</div>
+                    <h3>Glycerol</h3>
+                    <p>Humectant and conditioning agent that improves product feel, prevents skin dryness, and adds thickness to the formulation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Diagram Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2>Process Diagram for Liquid Detergent Preparation</h2>
+
+            <!-- Interactive Animation Control Panel -->
+            <div class="animation-control-panel">
+                <button id="playPauseBtn" class="control-btn">
+                    <span class="icon">⏸</span>
+                    <span class="label">Pause</span>
+                </button>
+                <div class="speed-control">
+                    <label>Speed:</label>
+                    <button class="speed-btn" data-speed="0.5">0.5x</button>
+                    <button class="speed-btn active" data-speed="1">1x</button>
+                    <button class="speed-btn" data-speed="1.5">1.5x</button>
+                    <button class="speed-btn" data-speed="2">2x</button>
+                </div>
+                <div class="progress-indicator">
+                    <span>Step <span id="currentStep">1</span> of 5</span>
+                </div>
+            </div>
+
+            <!-- Interactive Process Flow -->
+            <div class="interactive-process-container">
+                <!-- Step 1: Raw Materials -->
+                <div class="interactive-step" data-step="1">
+                    <div class="step-card glass-card">
+                        <div class="step-icon-wrapper">
+                            <div class="raw-materials-animation">
+                                <div class="bottle bottle-1"></div>
+                                <div class="bottle bottle-2"></div>
+                                <div class="bottle bottle-3"></div>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Raw Materials</h3>
+                            <div class="step-number">01</div>
+                            <p class="step-brief">Chemical collection</p>
+                        </div>
+                        <div class="step-glow"></div>
+                    </div>
+                    
+                    <div class="info-panel">
+                        <h4>Raw Materials</h4>
+                        <ul>
+                            <li><strong>Castor Oil:</strong> Natural emulsifier</li>
+                            <li><strong>Distilled Water:</strong> Primary solvent</li>
+                            <li><strong>Sodium Sulphate:</strong> Bulking agent</li>
+                            <li><strong>NaCl:</strong> Viscosity adjuster</li>
+                            <li><strong>Na₂CO₃:</strong> Alkaline builder</li>
+                        </ul>
+                        <div class="info-stats">
+                            <span>⏱ 5 min</span>
+                            <span>🌡 25°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow" data-arrow="1">
+                    <div class="arrow-line"><div class="flow-particle"></div></div>
+                    <div class="arrow-head">→</div>
+                </div>
+
+                <!-- Step 2: Mixing -->
+                <div class="interactive-step" data-step="2">
+                    <div class="step-card glass-card">
+                        <div class="step-icon-wrapper">
+                            <div class="mixing-animation">
+                                <div class="beaker">
+                                    <div class="liquid liquid-layer-1"></div>
+                                    <div class="liquid liquid-layer-2"></div>
+                                    <div class="liquid liquid-layer-3"></div>
+                                    <div class="stirrer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Mixing</h3>
+                            <div class="step-number">02</div>
+                            <p class="step-brief">Homogeneous blend</p>
+                        </div>
+                        <div class="step-glow"></div>
+                    </div>
+                    
+                    <div class="info-panel">
+                        <h4>Mixing Process</h4>
+                        <ul>
+                            <li><strong>Method:</strong> Mechanical stirring</li>
+                            <li><strong>Speed:</strong> 300-500 RPM</li>
+                            <li><strong>Objective:</strong> Uniform distribution</li>
+                        </ul>
+                        <div class="info-stats">
+                            <span>⏱ 15 min</span>
+                            <span>🌡 25°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow" data-arrow="2">
+                    <div class="arrow-line"><div class="flow-particle"></div></div>
+                    <div class="arrow-head">→</div>
+                </div>
+
+                <!-- Step 3: Heating -->
+                <div class="interactive-step" data-step="3">
+                    <div class="step-card glass-card">
+                        <div class="step-icon-wrapper">
+                            <div class="heating-animation">
+                                <div class="flask">
+                                    <div class="heated-liquid"></div>
+                                    <div class="heat-wave wave-1"></div>
+                                    <div class="heat-wave wave-2"></div>
+                                    <div class="heat-wave wave-3"></div>
+                                    <div class="steam"></div>
+                                </div>
+                                <div class="flame"></div>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Heating</h3>
+                            <div class="step-number">03</div>
+                            <p class="step-brief">Thermal processing</p>
+                        </div>
+                        <div class="step-glow"></div>
+                    </div>
+                    
+                    <div class="info-panel">
+                        <h4>Heating Stage</h4>
+                        <ul>
+                            <li><strong>Temperature:</strong> 60-80°C</li>
+                            <li><strong>Addition:</strong> Glycerol added</li>
+                            <li><strong>Purpose:</strong> Improve viscosity</li>
+                        </ul>
+                        <div class="info-stats">
+                            <span>⏱ 20 min</span>
+                            <span>🌡 60-80°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow" data-arrow="3">
+                    <div class="arrow-line"><div class="flow-particle"></div></div>
+                    <div class="arrow-head">→</div>
+                </div>
+
+                <!-- Step 4: Filtration -->
+                <div class="interactive-step" data-step="4">
+                    <div class="step-card glass-card">
+                        <div class="step-icon-wrapper">
+                            <div class="filtration-animation">
+                                <div class="funnel">
+                                    <div class="filter-paper"></div>
+                                    <div class="impurity particle-1"></div>
+                                    <div class="impurity particle-2"></div>
+                                    <div class="impurity particle-3"></div>
+                                    <div class="impurity particle-4"></div>
+                                    <div class="clean-liquid"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Filtration</h3>
+                            <div class="step-number">04</div>
+                            <p class="step-brief">Purification</p>
+                        </div>
+                        <div class="step-glow"></div>
+                    </div>
+                    
+                    <div class="info-panel">
+                        <h4>Filtration Process</h4>
+                        <ul>
+                            <li><strong>Method:</strong> Vacuum filtration</li>
+                            <li><strong>Filter:</strong> Fine mesh paper</li>
+                            <li><strong>Result:</strong> Clear solution</li>
+                        </ul>
+                        <div class="info-stats">
+                            <span>⏱ 10 min</span>
+                            <span>🌡 50°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow" data-arrow="4">
+                    <div class="arrow-line"><div class="flow-particle"></div></div>
+                    <div class="arrow-head">→</div>
+                </div>
+
+                <!-- Step 5: Final Product -->
+                <div class="interactive-step" data-step="5">
+                    <div class="step-card glass-card">
+                        <div class="step-icon-wrapper">
+                            <div class="final-product-animation">
+                                <div class="product-bottle">
+                                    <div class="bottle-liquid"></div>
+                                    <div class="bottle-cap"></div>
+                                    <div class="shine"></div>
+                                    <div class="sparkle sparkle-1">✨</div>
+                                    <div class="sparkle sparkle-2">✨</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <h3>Final Product</h3>
+                            <div class="step-number">05</div>
+                            <p class="step-brief">Ready to use</p>
+                        </div>
+                        <div class="step-glow"></div>
+                    </div>
+                    
+                    <div class="info-panel">
+                        <h4>Final Product</h4>
+                        <ul>
+                            <li><strong>Appearance:</strong> Clear, stable</li>
+                            <li><strong>Viscosity:</strong> Optimal</li>
+                            <li><strong>pH Level:</strong> 7.5-8.5</li>
+                        </ul>
+                        <div class="info-stats">
+                            <span>✓ Quality Checked</span>
+                            <span>📦 Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Progress -->
+            <div class="timeline-container">
+                <div class="timeline-bar">
+                    <div class="timeline-progress" id="timelineProgress"></div>
+                </div>
+                <div class="timeline-markers">
+                    <div class="marker" data-marker="1">
+                        <div class="marker-dot"></div>
+                        <span>Raw</span>
+                    </div>
+                    <div class="marker" data-marker="2">
+                        <div class="marker-dot"></div>
+                        <span>Mix</span>
+                    </div>
+                    <div class="marker" data-marker="3">
+                        <div class="marker-dot"></div>
+                        <span>Heat</span>
+                    </div>
+                    <div class="marker" data-marker="4">
+                        <div class="marker-dot"></div>
+                        <span>Filter</span>
+                    </div>
+                    <div class="marker" data-marker="5">
+                        <div class="marker-dot"></div>
+                        <span>Final</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-media">
+                <div class="process-video-shell">
+                    <div class="video-topbar">
+                        <span></span><span></span><span></span>
+                        <p>Process Walkthrough Video</p>
+                    </div>
+                    <div class="video-canvas" id="processVideoCanvas">
+                        <div class="video-stage-icon" id="videoStageIcon">🧪</div>
+                        <h3 id="videoStageTitle">Raw Materials Setup</h3>
+                        <p id="videoStageText">Measured castor oil, distilled water, sodium sulphate, NaCl, and Na2CO3 are prepared.</p>
+                    </div>
+                    <div class="video-progress-track">
+                        <div class="video-progress-fill" id="videoProgress"></div>
+                    </div>
+                </div>
+
+                <div class="process-video-notes">
+                    <h3>Whole Process Animation</h3>
+                    <p>The animated video panel auto-plays each stage from raw material setup to final detergent output. It continuously loops to visualize the complete lab flow in a clean and understandable way.</p>
+                    <ul>
+                        <li>Stage 1: Material measurement and setup</li>
+                        <li>Stage 2: Controlled mixing of all components</li>
+                        <li>Stage 3: Heating with glycerol addition</li>
+                        <li>Stage 4: Filtration and clarification</li>
+                        <li>Stage 5: Final liquid detergent collection</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Process Steps -->
+            <div class="process-diagram animated-process">
+                <div class="flow-line"></div>
+                <div class="process-step flow-step" data-step="1">
+                    <div class="step-box step-input">
+                        <h4>Raw Materials</h4>
+                        <ul>
+                            <li>Castor Oil</li>
+                            <li>Distilled H₂O</li>
+                            <li>Sodium Sulphate</li>
+                            <li>NaCl</li>
+                            <li>Na₂CO₃</li>
+                        </ul>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="process-step flow-step" data-step="2">
+                    <div class="step-box step-process">
+                        <h4>🔀 MIXING</h4>
+                        <p>Combine all raw materials in controlled proportions</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="process-step flow-step" data-step="3">
+                    <div class="step-box step-process">
+                        <h4>🔥 HEATING</h4>
+                        <p>Heat mixture to optimal temperature</p>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">+ Glycerol added</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="process-step flow-step" data-step="4">
+                    <div class="step-box step-process">
+                        <h4>⚗️ FILTRATION</h4>
+                        <p>Filter to remove impurities and achieve clarity</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="process-step flow-step" data-step="5">
+                    <div class="step-box step-output">
+                        <h4>Final Product</h4>
+                        <p>🧼 Liquid Detergent</p>
+                        <p style="font-size: 0.9em;">Ready for packaging and use</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Details -->
+            <div class="process-details">
+                <div class="detail-card">
+                    <h3>Step 1: Mixing</h3>
+                    <p>All raw materials are combined in precise proportions. The mixing process ensures uniform distribution of all components, creating a homogeneous solution. This step is critical for achieving consistent product quality.</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Step 2: Heating</h3>
+                    <p>The mixed solution is heated to a controlled temperature. During heating, glycerol is added to improve product properties. Temperature control is essential to prevent component degradation and ensure chemical reactions proceed optimally.</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Step 3: Filtration</h3>
+                    <p>The heated mixture is filtered to remove any undissolved particles and impurities. This process results in a clear, transparent liquid detergent of high quality, ready for packaging and commercial use.</p>
+                </div>
+            </div>
+
+            <!-- Process Diagrams Images -->
+            <div class="diagrams-section">
+                <h3>Visual Process Documentation</h3>
+                <div class="diagrams-grid">
+                    <div class="diagram-container">
+                        <h4>Block Diagram</h4>
+                        <img src="Screenshot 2026-04-01 090531.png" alt="Block Diagram for Preparing Liquid Detergent" class="diagram-image expandable-image" onclick="openModal(this)" style="cursor: pointer;">
+                        <p class="diagram-caption">Comprehensive block diagram showing all components and their relationships in the detergent preparation process</p>
+                    </div>
+                    <div class="diagram-container">
+                        <h4>Process Diagram</h4>
+                        <img src="Screenshot 2026-04-01 090703.png" alt="Process Diagram for Liquid Detergent Preparation" class="diagram-image expandable-image" onclick="openModal(this)" style="cursor: pointer;">
+                        <p class="diagram-caption">Detailed process flow diagram with equipment and materials used in each step of the preparation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apparatus Section -->
+    <section id="apparatus" class="apparatus">
+        <div class="container">
+            <h2>Apparatus Used</h2>
+            <div class="apparatus-grid">
+                <div class="apparatus-card">
+                    <div class="apparatus-icon">🧪</div>
+                    <h3>Beaker</h3>
+                    <p>Used for solution mixing and initial combining of reagents.</p>
+                </div>
+                <div class="apparatus-card">
+                    <div class="apparatus-icon">🥢</div>
+                    <h3>Glass Rod</h3>
+                    <p>Ensures uniform stirring and controlled material dispersion.</p>
+                </div>
+                <div class="apparatus-card">
+                    <div class="apparatus-icon">⚖️</div>
+                    <h3>Electronic Balance</h3>
+                    <p>Provides accurate mass measurements for all ingredients.</p>
+                </div>
+                <div class="apparatus-card">
+                    <div class="apparatus-icon">🔥</div>
+                    <h3>Heating Setup</h3>
+                    <p>Maintains thermal conditions during detergent processing.</p>
+                </div>
+                <div class="apparatus-card">
+                    <div class="apparatus-icon">⚗️</div>
+                    <h3>Filtration Flask</h3>
+                    <p>Used to separate fine impurities and improve clarity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results">
+        <div class="container">
+            <h2>Results Published</h2>
+            <p class="results-subtitle">Measured outcomes from the prepared liquid detergent formulation</p>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Clarity</h3>
+                    <p class="result-value">High</p>
+                    <p>Filtration produced a clear and stable detergent appearance.</p>
+                </div>
+                <div class="result-card">
+                    <h3>Viscosity</h3>
+                    <p class="result-value">Optimal</p>
+                    <p>Salt and glycerol combination achieved balanced flow behavior.</p>
+                </div>
+                <div class="result-card">
+                    <h3>Foam Formation</h3>
+                    <p class="result-value">Consistent</p>
+                    <p>Mixing and heating stages provided uniform foaming in tests.</p>
+                </div>
+                <div class="result-card">
+                    <h3>Stability</h3>
+                    <p class="result-value">Good</p>
+                    <p>No visible phase separation observed in short-term storage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">RB</div>
+                    <h3>Rakshit Bankar</h3>
+                    <p class="roll-no">Roll No: 46</p>
+                    <p class="team-role">Team Member</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">JI</div>
+                    <h3>Jayesh Iwnate</h3>
+                    <p class="roll-no">Roll No: 57</p>
+                    <p class="team-role">Team Member</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">RP</div>
+                    <h3>Ritesh Paul</h3>
+                    <p class="roll-no">Roll No: 55</p>
+                    <p class="team-role">Team Member</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">JP</div>
+                    <h3>Jaykumar Patil</h3>
+                    <p class="roll-no">Roll No: 45</p>
+                    <p class="team-role">Team Member</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">SV</div>
+                    <h3>Sanket Viranak</h3>
+                    <p class="roll-no">Roll No: 55</p>
+                    <p class="team-role">Team Member</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Expanded diagram">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Chemical Prototyping Laboratory. All rights reserved.</p>
+            <p>Advancing chemical engineering and industrial detergent preparation</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
